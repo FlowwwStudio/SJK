@@ -36,26 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-
-
-const lenis = new Lenis({
-  smooth: true, // Enable smooth scrolling
-  autoResize: true,
-  smoothWheel: true,
-});
-
-lenis.on("scroll", (e) => {
-  // console.log(e);
-});
-
-lenis.on("scroll", ScrollTrigger.update);
-
-gsap.ticker.add((time) => {
-  lenis.raf(time * 900);
-});
-
-gsap.ticker.lagSmoothing(0);
-
 const headlineTarget = document.querySelector("[fs-typewritter='text']");
 
 // Check if the element exists in the DOM
